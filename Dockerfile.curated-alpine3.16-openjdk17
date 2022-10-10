@@ -1,0 +1,6 @@
+FROM ghcr.io/codepraxis-io/alpine3.16:openjdk17 
+
+WORKDIR /app 
+COPY ./target/app.jar /app/app.jar
+
+ENTRYPOINT ["java","-jar","/app/app.jar"]
